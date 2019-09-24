@@ -1,0 +1,53 @@
+<form [formGroup]="applicationForm" class="form" (ngSubmit)="submitApplication()">
+    <h3 class="p-2 text-left title">ACME Offer - New Application</h3>
+    <hr>
+    <div class="form-group row">
+      <label for="country" class="col-sm-2 col-form-label">Country of Residence <span class="required">*</span></label>
+
+      <div class="col-sm-3">
+        <select class="form-control" id="country" formControlName="CountryName" (change)="loadStateDDL();"
+        [ngClass]="{ 'has-error': isSubmitted && formControls.CountryName.errors }" required>
+            <option value="">Please select</option>
+                  <option *ngFor="let country of countries" value={{country.countryName}}>
+                      {{country.countryName}}
+                  </option>
+          </select>
+          <div class="has-errors" *ngIf="isSubmitted && formControls.CountryName.errors">Please select Country</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="state" class="col-sm-2 col-form-label">State <span class="required">*</span></label>
+      <div class="col-sm-3">
+          <select class="form-control" id="state" formControlName="State"  [ngClass]="{ 'has-error': isSubmitted && formControls.State.errors }"
+                  required>
+              <option value="">Please select</option>
+                  <option *ngFor="let state of states" value={{state.id}}>
+                      {{state.state}}
+                  </option>
+            </select>
+            <div class="has-errors" *ngIf="isSubmitted && formControls.State.errors">Please select State</div>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="postcode" class="col-sm-2 col-form-label">Postcode <span class="required">*</span></label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="postcode" formControlName="PCode"
+          [ngClass]="{ 'has-error': isSubmitted && formControls.PCode.errors }" required>
+          <div class="has-errors" *ngIf="isSubmitted && formControls.PCode.errors">Please enter Postcode</div>
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="fullName" class="col-sm-2 col-form-label" >Full Name <span class="required">*</span></label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="fullName" formControlName="FullName" maxlength="120"
+            [ngClass]="{ 'has-error': isSubmitted && formControls.FullName.errors }" required>
+            <div class="has-errors" *ngIf="isSubmitted && formControls.FullName.errors">Please enter Full Name</div>
+          </div>
+        </div>
+        <br />
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </div>
+    </div>
+  </form>

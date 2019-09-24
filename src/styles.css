@@ -1,0 +1,162 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color1:#555cc8;
+     --color2:white;
+     --color3:black;
+     --color4:#1010102e;
+     --color5:#7A3EC8;
+     --color6:#297FC8;;
+     --color7:#07c5a0;
+   }
+   .nav-link{
+    text-align: center;
+    position: relative;
+    padding:17px 28px;
+}
+.nav-item.active .nav-link .fa{
+    color:var(--color7);
+}
+.has-error {
+  border-color: rgb(216, 12, 12);
+  color: rgb(230, 14, 14);
+}
+
+.has-errors {
+  color: red;
+}
+.required
+{
+    color: red;
+}
+
+.navbar{
+    background: linear-gradient(230deg, var(--color5), var(--color6));
+    color:var(--color2);
+    padding:0rem 1rem;
+}
+.table .thead{
+    border-bottom: 1px solid var(--color1);
+  }
+.table .thead .td{
+   text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    color:var(--color6);
+}
+.table .tr .td{
+    padding:0.5rem;
+    text-align: center;
+}
+.table .tr:nth-child(odd){
+    background-color: white;
+}
+.table .tr:nth-child(even){
+background-color: #f1efef91;
+     --color6:#297FC8;
+     --color7:#07c5a0;
+   }
+   textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+   .input-group-text{
+       background-color: transparent;
+       border-left:0;
+       border-top:0;
+       border-right:0;
+       border-radius: 0;
+   }
+   .title{
+       color:var(--color7);
+   }
+   .btn-primary{
+       background-color: var(--color1);
+   }
+   .form-control{
+       border-left:0;
+       border-top:0;
+       border-right:0;
+       border-radius: 0;
+   }
+   .form-control:focus{
+       border-color:var(--color5);
+   }
+   .navbar .dropdown-item{
+    padding:11px 13px;
+     cursor:pointer;
+     color:#6c7293 !important;
+     font-size: .875rem;
+ }
+ .navbar .dropdown-item .fa{
+     color:#7A3EC8;
+ }
+ .nav-link.dropdown-toggle:hover{
+     background-color: transparent;
+ }
+ .dropdown .dropdown-toggle:after{
+     border-top: 0;
+     border-right: 0;
+     border-left: 0;
+     border-bottom: 0;
+     font: normal normal normal 14px/1 FontAwesome;
+     content: "\f107";
+     width: auto;
+     height: auto;
+     vertical-align: middle;
+     line-height: .625rem;
+     font-size: 1.25rem;
+     margin-left: 0;
+ }
+ .navbar{
+    background: linear-gradient(230deg, #7A3EC8, #297FC8);
+    box-shadow: 2px 3px 11px 3px #ecefee;
+    color:white;
+    padding:0rem 1rem;
+}
+.navbar a{
+    color:white !important;
+}
+.table{
+    .th{
+        font-weight: bold;
+        color:var(--color1);
+    }
+    .tr .td,.th .td{
+        padding:1vw;
+        text-align: center
+    }
+    .tr:nth-child(odd){
+background-color: white;
+    }
+    .tr:nth-child(even){
+        background-color: #5d55c812;
+    }
+}
+
+.card{
+    box-shadow: 0 2px 4px 0 rgba(185, 185, 185, 0.5);
+}
+.card-body{
+    padding:1vw;
+}
+.card-header{
+    background-color:transparent;
+}
+.card-header:after{
+    border-bottom: 2px solid red;
+    content:""
+}
